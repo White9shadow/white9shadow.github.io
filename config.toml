@@ -1,38 +1,77 @@
-baseurl = "https://litegapps.github.io"
-title = "LiteGapps - Custom Google Apps Android"
-contentdir    = "content"
-layoutdir     = "layouts"
-publishdir    = "public"
+baseURL = "https://white9shadow.github.io"
 languageCode = "en"
-resourceDir = "../resources"
-DefaultContentLanguage = "en"
-Paginate     = 10
-theme        = "bootstrap-5"
-
-PygmentsCodeFences = true
-PygmentsStyle      = "monokai"
-
-[markup]
-  [goldmark]
-    [renderer]
-      unsafe= true # Allows you to write raw html in your md files
-
+defaultContentLanguage = "en"
+theme = "revws"
+paginate = 5
+contentDir = "content"
+publishDir = "public"
 buildFuture = true
-[author]
-     name = "litegapps"
-     
-[sitemap]
-  changefreq = "always"
-  priority = 0.8
-  filename = "sitemap.xml"
-[permalinks]
-   changelog     = ":section/:year/:slug"
-   blog          = ":section/:year:month/:slug"
-  
+
 [params]
-  text_color = ""
-  author = ""
-  favicon = ""
-  site_logo = ""
-  description = "LiteGapps is a custom Google Apps on the Android operating system, an open source project that focuses on small, efficient, and comprehensive."
+  contentTypeName = "post"
+  defaultTheme = "dark"
+  showMenuItems = 3
+  showReadingTime = false
+  homeSubtitle = "Tech | Android | Custom ROMs | Optimization"
+  description = "revWhiteShadow is a Bangladeshi Android developer and modder known for creating custom Magisk modules, ROM tweaks, and performance enhancements. Focused on minimalism and speed."
   recent_posts_number = 3
+  logoText = "┌──(gsm㉿revWhiteShadow)-"
+  logoHomeLink = "/"
+  footerLogoText = "└──(gsm㉿revWhiteShadow)-"
+
+[languages]
+  [languages.en]
+    title = "revWhiteShadow | Android Modding & Development"
+    subtitle = "Fast. Clean. Optimized."
+    keywords = "Magisk modules, Android development, custom ROMs"
+
+    menuMore = "More"
+    writtenBy = "by"
+    readMore = "Read more"
+    readOtherPosts = "More posts"
+    newerPosts = "Newer"
+    olderPosts = "Older"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
+
+    [languages.en.params.logo]
+      logoText = "┌──(root㉿revWhiteShadow)-"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "blog"
+        name = "My Blog"
+        url = "/blog/"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "modules"
+        name = "Magisk Modules"
+        url = "/magisk-modules/"
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "linux"
+        name = "Linux"
+        url = "/linux/"
+        weight = 3
+      [[languages.en.menu.main]]
+        identifier = "windows"
+        name = "Windows"
+        url = "/windows/"
+        weight = 4
+      [[languages.en.menu.footer]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 1
+      [[languages.en.menu.footer]]
+        identifier = "privacy"
+        name = "Privacy"
+        url = "/privacy/"
+        weight = 2
+      [[languages.en.menu.footer]]
+        identifier = "contact"
+        name = "Contact Us"
+        url = "/contact/"
+        weight = 3

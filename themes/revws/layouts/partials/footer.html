@@ -1,0 +1,31 @@
+<footer class="footer">
+
+  <div class="footer__inner">
+    {{ if $.Site.Copyright }}
+      <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
+      {{ else }}
+      {{ partial "logo.html" . }}
+                <ul>
+  {{ range .Site.Menus.footer }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+  {{ end }}
+</ul>
+      <div class="copyright">
+        <span>© {{ now.Year }} revWhiteShadow <a href="https://github.com/white9shadow" target="_blank" rel="noopener"></a></span>
+
+      </div>
+      
+
+
+    {{ end }}
+
+  </div>
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $prism := resources.Get "js/prism.js" | js.Build }}
+{{ $theme := resources.Get "js/theme.js" | js.Build }}
+{{ $bundle := slice $menu $prism $theme | resources.Concat "bundle.js" | resources.Minify }}
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+
+{{- partial "extended_footer.html" . }}
