@@ -1,14 +1,12 @@
-baseURL = "https://white9shadow.github.io/"
+baseURL = "https://white9shadow.github.io"
 languageCode = "en"
 defaultContentLanguage = "en"
-
-buildFuture = true
+theme = "revws"
+paginate = 5
 contentDir = "content"
 publishDir = "public"
+buildFuture = true
 
-[pagination]
-  pagerSize = 5
- 
 [params]
   contentTypeName = "post"
   defaultTheme = "dark"
@@ -17,34 +15,29 @@ publishDir = "public"
   homeSubtitle = "Tech | Android | Custom ROMs | Optimization"
   description = "revWhiteShadow is a Bangladeshi Android developer and modder known for creating custom Magisk modules, ROM tweaks, and performance enhancements. Focused on minimalism and speed."
   recent_posts_number = 3
-  logoText = "┌──(gsm㉿revWS)-"
+  logoText = "┌──(gsm㉿revWhiteShadow)-"
   logoHomeLink = "/"
-  footerLogoText = "└──(gsm㉿revWS)-"
- googleAnalytics = "UA-XXXXXX-X"  # Replace with your Google Analytics ID
-# Optional: Suppress raw HTML warning if needed
-ignoreLogs = ['warning-goldmark-raw-html']
+  footerLogoText = "└──(gsm㉿revWhiteShadow)-"
 
-
- [languages]
+[languages]
   [languages.en]
     title = "revWhiteShadow | Android Modding & Development"
+    subtitle = "Fast. Clean. Optimized."
+    keywords = "Magisk modules, Android development, custom ROMs"
 
-    [languages.en.params]
-      subtitle = "Fast. Clean. Optimized."
-      keywords = "Magisk modules, Android development, custom ROMs"
-      menuMore = "More"
-      writtenBy = "by"
-      readMore = "Read more"
-      readOtherPosts = "More posts"
-      newerPosts = "Newer"
-      olderPosts = "Older"
-      minuteReadingTime = "min read"
-      dateFormatSingle = "2006-01-02"
-      dateFormatList = "2006-01-02"
+    menuMore = "More"
+    writtenBy = "by"
+    readMore = "Read more"
+    readOtherPosts = "More posts"
+    newerPosts = "Newer"
+    olderPosts = "Older"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
 
-      [languages.en.params.logo]
-        logoText = "┌──(root㉿revWS)-"
-        logoHomeLink = "/"
+    [languages.en.params.logo]
+      logoText = "┌──(root㉿revWhiteShadow)-"
+      logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
@@ -52,46 +45,33 @@ ignoreLogs = ['warning-goldmark-raw-html']
         name = "My Blog"
         url = "/blog/"
         weight = 1
-
-  #    [[languages.en.menu.main]]
-   #     identifier = "modules"
-    #    name = "Magisk Modules"
-     #   url = "/magisk-modules/"
-      #  weight = 2
-
       [[languages.en.menu.main]]
-        identifier = "Archive/"
-        name = "Archive"
-        url = "/archive/"
+        identifier = "modules"
+        name = "Magisk Modules"
+        url = "/magisk-modules/"
         weight = 2
-
-
+      [[languages.en.menu.main]]
+        identifier = "linux"
+        name = "Linux"
+        url = "/linux/"
+        weight = 3
+      [[languages.en.menu.main]]
+        identifier = "windows"
+        name = "Windows"
+        url = "/windows/"
+        weight = 4
       [[languages.en.menu.footer]]
         identifier = "about"
         name = "About"
         url = "/about/"
         weight = 1
-
       [[languages.en.menu.footer]]
         identifier = "privacy"
         name = "Privacy"
         url = "/privacy/"
         weight = 2
-
       [[languages.en.menu.footer]]
         identifier = "contact"
         name = "Contact Us"
         url = "/contact/"
         weight = 3
-        
-        
-
-# ✅ Allow raw HTML (fix the warning)
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-# ✅ Suppress raw HTML warning
-ignoreLogs = ['warning-goldmark-raw-html']
-
