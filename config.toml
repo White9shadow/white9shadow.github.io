@@ -25,7 +25,6 @@ publishDir = "public"
 ignoreLogs = ['warning-goldmark-raw-html']
 
 
-[languages]
  [languages]
   [languages.en]
     title = "revWhiteShadow | Android Modding & Development"
