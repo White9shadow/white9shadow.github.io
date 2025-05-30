@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+    .content, .main-content, .post-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        text-align: left; /* Adjust alignment

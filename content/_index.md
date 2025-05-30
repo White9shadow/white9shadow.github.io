@@ -1,7 +1,7 @@
 # Who Am I?
 
 Hey there! I'm **revWhiteShadow**, also known as **White9shadow**, a passionate developer from Bangladesh. My world revolves around **Android optimization**, **frontend performance**, **free software**, and **security**. I believe that **smart tech** shouldn’t be locked down. Whether it’s Android, Linux, or web development, my mission is clear:
-
+ ggfg
 > **Born to revolution. Be the revolutionary.**
 
 I don’t just use technology — I reshape it, break its limits, and push it further than anyone expects. Whether it's speeding up Android or pushing Linux to its limits, I’m in the trenches making sure nothing stands in the way of *true* system control.

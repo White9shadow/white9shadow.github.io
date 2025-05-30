@@ -69,6 +69,11 @@ h4 {
 a {
   color: inherit;
 }
+.post a {
+  color: #3b95e3; /* A vibrant pink resembling Sukuna's hair */
+}
+
+
 
 img {
   display: block;
@@ -301,4 +306,59 @@ h4:hover a {
 
 .framed .h-anchor {
   visibility: hidden;
+}
+
+
+
+
+
+
+
+.tools-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    overflow-x: auto; /* Enable horizontal scroll always */
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+/* Optional: smaller scrollbars and hover effect */
+.tools-icons::-webkit-scrollbar {
+    height: 6px;
+}
+.tools-icons::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 3px;
+}
+
+.tools-icons a {
+    flex: 0 0 auto;
+    display: inline-block;
+}
+
+.tools-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+    .tools-icons {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .tools-icons img {
+        width: 32px;
+        height: 32px;
+    }
 }

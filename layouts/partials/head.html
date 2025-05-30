@@ -11,19 +11,23 @@
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
-<!-- head custom -->
+<!-- Custom head partial (prepended) -->
 {{- partial "prepended_head.html" . }}
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3310473974533031"
+     crossorigin="anonymous"></script>
 <!-- Theme CSS -->
-{{ $res := resources.Get "css/style.scss" }}
-{{ $style := $res | resources.ToCSS }}
+{{ $style := resources.Get "css/style.scss" | css.Sass (dict "outputStyle" "compressed") | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-<!-- Custom CSS to override theme properties (/static/style.css) -->
-<link rel="stylesheet" href="{{ "style.css" | absURL }}" />
+
+<!-- Custom CSS to override theme properties -->
+{{ if resources.Get "style.css" }}
+  <link rel="stylesheet" href="{{ (resources.Get "style.css").RelPermalink }}" />
+{{ end }}
 
 <!-- Icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}" />
-<link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | relURL }}" />
+<link rel="shortcut icon" href="{{ "img/favicon.png" | relURL }}" />
 
 <!-- Fonts -->
 <link href="{{ (resources.Get "fonts/Inter-Italic.woff2").RelPermalink }}" rel="preload" type="font/woff2" as="font" crossorigin="">
@@ -36,13 +40,13 @@
 <!-- Twitter Card -->
 {{ template "_internal/twitter_cards.html" . }}
 
-<!-- OG data -->
+<!-- OpenGraph -->
 {{ template "_internal/opengraph.html" . }}
 
-<!-- RSS | JSON -->
+<!-- RSS/JSON Feeds -->
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<!-- head custom -->
+<!-- Custom head partial (appended) -->
 {{- partial "extended_head.html" . }}
