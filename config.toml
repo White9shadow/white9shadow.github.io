@@ -1,43 +1,47 @@
 baseURL = "https://white9shadow.github.io"
 languageCode = "en"
 defaultContentLanguage = "en"
-theme = "revws"
-paginate = 5
+
+buildFuture = true
 contentDir = "content"
 publishDir = "public"
-buildFuture = true
 
+[pagination]
+  pagerSize = 5
+ 
 [params]
   contentTypeName = "post"
   defaultTheme = "dark"
   showMenuItems = 3
   showReadingTime = false
-  homeSubtitle = "Tech | Android | Custom ROMs | Optimization"
-  description = "revWhiteShadow is a Bangladeshi Android developer and modder known for creating custom Magisk modules, ROM tweaks, and performance enhancements. Focused on minimalism and speed."
+  homeSubtitle = "Game | Unblocked Games | Classroom 6x "
+  description = "Discover how G Plus Unblocked lets you play your favorite browser games anywhere—school, work, or on mobile. Learn access tips, top games, safety advice, and troubleshooting."
   recent_posts_number = 3
-  logoText = "┌──(gsm㉿revWhiteShadow)-"
+  logoText = "G Plus Unblocked"
   logoHomeLink = "/"
-  footerLogoText = "└──(gsm㉿revWhiteShadow)-"
+  footerLogoText = "G Plus Unblocked"
+  googleAnalytics = "UA-XXXXXX-X"
 
 [languages]
   [languages.en]
-    title = "revWhiteShadow | Android Modding & Development"
-    subtitle = "Fast. Clean. Optimized."
-    keywords = "Magisk modules, Android development, custom ROMs"
+    title = "G Plus Unblocked"
 
-    menuMore = "More"
-    writtenBy = "by"
-    readMore = "Read more"
-    readOtherPosts = "More posts"
-    newerPosts = "Newer"
-    olderPosts = "Older"
-    minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
+    [languages.en.params]
+      subtitle = "g"
+      keywords = "Game | Unblocked Games | Classroom 6x"
+      menuMore = "More"
+      writtenBy = "by"
+      readMore = "Read more"
+      readOtherPosts = "More posts"
+      newerPosts = "Newer"
+      olderPosts = "Older"
+      minuteReadingTime = "min read"
+      dateFormatSingle = "2006-01-02"
+      dateFormatList = "2006-01-02"
 
-    [languages.en.params.logo]
-      logoText = "┌──(root㉿revWhiteShadow)-"
-      logoHomeLink = "/"
+      [languages.en.params.logo]
+        logoText = "G Plus Unblocked"
+        logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
@@ -45,33 +49,29 @@ buildFuture = true
         name = "My Blog"
         url = "/blog/"
         weight = 1
+
       [[languages.en.menu.main]]
-        identifier = "modules"
-        name = "Magisk Modules"
-        url = "/magisk-modules/"
+        identifier = "Archive"
+        name = "Archive"
+        url = "/archive/"
         weight = 2
-      [[languages.en.menu.main]]
-        identifier = "linux"
-        name = "Linux"
-        url = "/linux/"
-        weight = 3
-      [[languages.en.menu.main]]
-        identifier = "windows"
-        name = "Windows"
-        url = "/windows/"
-        weight = 4
+
       [[languages.en.menu.footer]]
         identifier = "about"
         name = "About"
         url = "/about/"
         weight = 1
+
       [[languages.en.menu.footer]]
         identifier = "privacy"
         name = "Privacy"
         url = "/privacy/"
         weight = 2
+
       [[languages.en.menu.footer]]
         identifier = "contact"
         name = "Contact Us"
         url = "/contact/"
+        
+        
         weight = 3
